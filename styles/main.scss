@@ -1,0 +1,293 @@
+$black-color:#010101;
+$fade-black: #0A0A09;
+$white-color:#ffffff;
+$yellow-color: #FDC65D;
+$green-color: #17B978;
+$blue-color:#22D1EE;
+$grey-color: #AEAEAD;
+$transparent:0.3;
+$poppin: 'Poppins', sans-serif;
+$subheads: 2.5em;
+
+body{
+    margin:0;
+    padding:0;
+    background-color: $black-color;
+    color: $white-color;
+    font-family: $poppin;
+}
+.yellow-line{
+    position:relative;
+    left:50%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em 1em 2em;
+    position:sticky;
+    top:0;
+    z-index: 10;
+    button{
+        background-color: $black-color;
+        border:none;  
+    }
+}
+
+.sidemenu{
+    display: none;
+    position:sticky;
+    top:5em;
+    background-color: $fade-black;
+    padding:2em;
+    border-radius:0 30px 30px 0;
+    width:35%;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+ul{
+    list-style-type: none;
+
+    li{
+        margin-top:.45em;
+
+        a{
+            text-decoration: none;
+            color: $white-color;
+        }
+    }
+}
+
+main{
+    padding:2em;
+}
+
+section{
+   margin-top:5em;
+}
+
+.name{
+    width:40%;
+
+    h1{
+        position: relative;
+        bottom: 1em;
+        margin:0;
+        font-weight: 900;
+        font-size:2.7em;
+        word-spacing: 0;
+        span{
+            position:absolute;
+            bottom:1.2em;
+            margin:0 auto;
+        }
+    }
+}
+
+.green-square{
+    position:relative;
+    top:10%;
+    left:30%;
+    animation: cycle 5s linear infinite;
+}
+
+@keyframes cycle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.description{
+    display:flex;
+    justify-content: space-between;
+
+    .squirly-line{
+        position: relative;
+        top:3em;
+    }
+    .description-text{
+        .tagline{
+            color:$yellow-color;
+        }
+
+        width:45%;
+        #light-text{
+            font-size:.65em;
+            color:$grey-color;
+
+            a{
+                text-decoration:none;
+                color:$yellow-color;
+            }
+        }
+    }
+}
+
+// modification classes
+.tagline-mods{
+    color:$yellow-color;
+    text-align:center;
+}
+.blue-color-mods{
+    color:$blue-color;
+}
+.green-color-mods{
+    color:$green-color;
+}
+.space-mods{
+    margin-top:4em;
+}
+
+// end of modification classes
+
+.subhead{
+    font-weight:900;
+    font-size:$subheads;
+    text-align: center;
+    margin:0;
+}
+.aboutme{
+    button{
+        color:$yellow-color;
+        background:none;
+        border:none;
+        outline:none;
+    }
+
+    .readfull{
+        display: none;
+    }
+}
+
+.skills-display{
+    .tagline{
+        text-align: left;
+        margin-left:2.5em;
+    }
+    background-image: linear-gradient($green-color, $blue-color),
+    linear-gradient($green-color, $blue-color),
+    linear-gradient($blue-color, $green-color),
+    linear-gradient($blue-color, $green-color);
+    background-repeat: no-repeat;
+    background-size: 2px 20%, 20% 2px, 2px 20%, 20% 2px;
+    background-position: right bottom, right bottom, left top, left top, 4px 4px;
+    width:80%;
+    padding:1.2em;
+    margin-top:3em;
+}
+
+.projects-container{
+    position:relative;
+    top:2em;
+    margin:0 auto;
+}
+.projects{
+    padding-bottom:1em;
+    background-color:$fade-black;
+    margin-top:2em;
+    border-radius:15px; 
+
+    .image-holder{
+        height:200px;
+        border-radius:15px;
+    }
+
+    .project-description{
+        padding-left:1em;
+        width:70%;
+
+        a{
+            text-decoration: none;
+            color:$blue-color;
+            font-size:12px;
+        }
+    }
+}
+
+.send-svg{
+    position: absolute;
+    left:96%;
+    top:0;
+}
+.dust-svg{
+    position: absolute;
+    left:93%;
+    top:-.5em;
+}
+
+.contact_info_container{
+    width:90%;
+    margin:3.2em;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1em;
+}
+
+.contact-info{
+    position: relative;
+
+    .backfade{
+        height:70px;
+        width:50%;
+        background-color: $green-color;
+        opacity:$transparent;
+    }
+
+    .foreground{
+        height:70px;
+        width:50%;
+        background-color: $green-color;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom:3em;
+        left:.75em;
+        font-size: 1.2em;
+        transition: transform 450ms ease-in;
+    }
+    .infos{
+        margin-top:2em;
+        p{
+            color:$grey-color;
+            font-size:14px;
+            margin:0;
+            font-size: .65em;
+        }
+        h4{
+            margin:0;
+            font-size: .75em;
+        }
+    }
+}
+
+.foreground:hover{
+    transform:translate(-15px, -8px);
+}
+
+.contact-email{
+    width:50%;
+    margin-top:4em;
+    margin-left:2em;
+    p{
+        line-height: 1.6em;
+        font-size:.85em;
+        a{
+            color:$white-color;
+            text-decoration-color: $yellow-color;
+        }
+    }
+}
+
+@media screen and (min-width:474px){
+    .name{
+        h1{
+            span{
+                right:1.5em;
+            }
+        }
+    }
+}
