@@ -35,7 +35,7 @@ nav button {
   position: -webkit-sticky;
   position: sticky;
   top: 5em;
-  background-color: #0A0A09;
+  background-color: #1d1d1a;
   padding: 2em;
   border-radius: 0 30px 30px 0;
   width: 35%;
@@ -204,7 +204,7 @@ section {
 
 .projects {
   padding-bottom: 1em;
-  background-color: #0A0A09;
+  background-color: #1d1d1a;
   margin-top: 2em;
   border-radius: 15px;
 }
@@ -238,8 +238,10 @@ section {
 }
 
 .contact_info_container {
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
   width: 90%;
-  margin: 3.2em;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -247,8 +249,13 @@ section {
   gap: 1em;
 }
 
+.contact_info_container a {
+  color: #ffffff;
+}
+
 .contact-info {
   position: relative;
+  margin-left: 2.3em;
 }
 
 .contact-info .backfade {
@@ -315,8 +322,8 @@ section {
 
 .contact-email p a {
   color: #ffffff;
-  -webkit-text-decoration-color: #FDC65D;
-          text-decoration-color: #FDC65D;
+  -webkit-text-decoration-color: #17B978;
+          text-decoration-color: #17B978;
 }
 
 @media screen and (min-width: 474px) {

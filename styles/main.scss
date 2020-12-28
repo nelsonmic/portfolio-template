@@ -1,5 +1,5 @@
 $black-color:#010101;
-$fade-black: #0A0A09;
+$fade-black: #1d1d1a;
 $white-color:#ffffff;
 $yellow-color: #FDC65D;
 $green-color: #17B978;
@@ -167,10 +167,7 @@ section{
         text-align: left;
         margin-left:2.5em;
     }
-    background-image: linear-gradient($green-color, $blue-color),
-    linear-gradient($green-color, $blue-color),
-    linear-gradient($blue-color, $green-color),
-    linear-gradient($blue-color, $green-color);
+    background-image: linear-gradient($green-color, $blue-color), linear-gradient($green-color, $blue-color), linear-gradient($blue-color, $green-color), linear-gradient($blue-color, $green-color);
     background-repeat: no-repeat;
     background-size: 2px 20%, 20% 2px, 2px 20%, 20% 2px;
     background-position: right bottom, right bottom, left top, left top, 4px 4px;
@@ -219,15 +216,21 @@ section{
 }
 
 .contact_info_container{
+    transform: translateY(2em);
     width:90%;
-    margin:3.2em;
+    margin:0 auto;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     gap:1em;
+
+    a{
+        color:$white-color;
+    }
 }
 
 .contact-info{
     position: relative;
+    margin-left:2.3em;
 
     .backfade{
         height:70px;
@@ -277,7 +280,7 @@ section{
         font-size:.85em;
         a{
             color:$white-color;
-            text-decoration-color: $yellow-color;
+            text-decoration-color: $green-color;
         }
     }
 }
